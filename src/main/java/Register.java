@@ -24,13 +24,13 @@ public class Register extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
 
-         //get Attribute in Form
-         String   fname  = request.getParameter("fname");
-         String  lname  = request.getParameter("lname");
-         String   email  = request.getParameter("email");
-         String  deperment  = request.getParameter("dept");
-         String  year =  request.getParameter("year");
-         String skills = request.getParameter("skills");
+        //get Attribute in Form
+        String   fname  = request.getParameter("fname");
+        String  lname  = request.getParameter("lname");
+        String   email  = request.getParameter("email");
+        String  deperment  = request.getParameter("dept");
+        String  year =  request.getParameter("year");
+        String skills = request.getParameter("skills");
 
 
         System.out.println(fname);

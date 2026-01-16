@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Registration | Vibrant Edition</title>
+    <style>
+        /* Modern Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+        }
+
+        body {
+            /* Animated Background Gradient */
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Glassmorphism Card */
+        .form-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            width: 100%;
+            max-width: 500px;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-header h2 {
+            /* Multi-color Gradient Text */
+            background: linear-gradient(to right, #e73c7e, #23a6d5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .form-header p {
+            color: #555;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        /* Input Styling */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: #444;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid #eee;
+            border-radius: 12px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            outline: none;
+            background: #fdfdfd;
+        }
+
+        /* Colorful Focus Effect */
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #23a6d5;
+            box-shadow: 0 0 15px rgba(35, 166, 213, 0.3);
+            background: #fff;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        /* The Ultimate Colorful Button */
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(to right, #00b09b, #96c93d); /* Success Green Gradient */
+            background: linear-gradient(to right, #FF512F, #DD2476); /* Pink/Orange Gradient */
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            margin-top: 10px;
+            box-shadow: 0 10px 20px rgba(221, 36, 118, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(221, 36, 118, 0.5);
+            filter: brightness(1.1);
+        }
+
+        .submit-btn:active {
+            transform: scale(0.96);
+        }
+
+        /* Small screen adjustments */
+        @media (max-width: 480px) {
+            .form-row { flex-direction: column; gap: 0; }
+            .form-card { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-card">
+    <div class="form-header">
+        <h2>Campus Drive 2026</h2>
+        <p>Your journey to the top starts here</p>
+    </div>
+
+    <form  method="POST" action="register">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" placeholder="John" required>
+            </div>
+            <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Doe" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">University Email</label>
+            <input type="email" id="email" name="email" placeholder="john.doe@university.edu" required>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="dept">Department</label>
+                <select id="dept" name="dept">
+                    <option value="cs">Computer Science</option>
+                    <option value="it">Info Tech</option>
+                    <option value="ece">Electronics</option>
+                    <option value="mech">Mechanical</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="year">Grad Year</label>
+                <input type="number" id="year" name="year" value="2026">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="skills">Specialization</label>
+            <input type="text" id="skills" name="skills" placeholder="AI/ML, Web Dev, Cloud">
+        </div>
+
+        <button type="submit" class="submit-btn">Apply Now</button>
+    </form>
+</div>
+</body>
+</html>
